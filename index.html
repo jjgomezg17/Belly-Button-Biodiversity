@@ -32,10 +32,29 @@
       border-color: #4682B4;
       color: #000000;
     }
+
+    /* Add custom styles for the navigation bar */
+    .navbar {
+      background-color: #87CEEB;
+    }
+
+    .navbar a {
+      color: #ffffff;
+    }
   </style>
 </head>
 
 <body>
+  <!-- Add a navigation bar -->
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <ul class="nav navbar-nav">
+        <!-- Add links for opening the "bar" and "bubble" elements in new tabs -->
+        <li><a href="#" onclick="openInNewTab('bar')">Bar Chart</a></li>
+        <li><a href="#" onclick="openInNewTab('bubble')">Bubble Chart</a></li>
+      </ul>
+    </div>
+  </nav>
   <div class="container-fluid">
     <div class="row">
       <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 jumbotron text-center">
@@ -51,7 +70,7 @@
         </div>
         <div class="panel panel-primary">
           <div class="panel-heading">
-            <h3 class="panel-title">Demographic Info</h3>
+            <h3 class="panel-title">Demographic Info</h3
           </div>
           <div id="sample-metadata" class="panel-body"></div>
         </div>
@@ -68,6 +87,8 @@
         <div class="row">
           <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
             <div id="bubble"></div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -75,6 +96,16 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
   <script src="charts.js"></script>
+
+  <!-- Add a function for opening elements in new tabs -->
+  <script>
+    function openInNewTab(id) {
+      var element = document.getElementById(id);
+      var data = element.innerHTML;
+      var newTab = window.open();
+      newTab.document.write(data);
+    }
+  </script>
 </body>
 
 </html>
