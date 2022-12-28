@@ -101,19 +101,21 @@ function buildCharts(sample) {
     Plotly.newPlot('bar', barData, barLayout);
 
     // Deliverable 2: 1. Create the trace for the bubble chart.
-    console.log(otuIDs.filter((item,
-      index) => otuIDs.indexOf(item) === index));
+    //console.log(otuIDs.filter((item,
+      //index) => otuIDs.indexOf(item) === index));
     var bubbleData = [{
       x: otuIDs,
       y: otuSampleValues,
       text: otuLabels,
       mode: 'markers',
        marker: {
-         size: otuSampleValues,
-         color: otuIDs.map(id => numberToColour(id*1000)),
+        size: otuSampleValues,
+        color: otuSampleValues,
+        colorscale: "Portland"
        }
     }];
-    console.log(otuIDs);
+    //otuIDs.map(id => numberToColour(id*1000))
+    //console.log(otuIDs);
     // Deliverable 2: 2. Create the layout for the bubble chart.
     var bubbleLayout = {
         title: 'Bacteria Cultures Per Sample',
