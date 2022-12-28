@@ -6,15 +6,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Belly Button Biodiversity</title>
+  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <style>
     body {
-      background-color: #ADD8E6;
+      background-color: #ffffff;
+      color: #000000;
+      font-family: 'Roboto', sans-serif;
     }
 
     .jumbotron {
       background-color: #87CEEB;
-      color: #ffffff;
+      color: #000000;
     }
 
     .panel-primary {
@@ -24,7 +27,7 @@
     .panel-primary .panel-heading {
       background-color: #6495ED;
       border-color: #4682B4;
-      color: #ffffff;
+      color: #000000;
     }
 
     .well {
@@ -32,29 +35,10 @@
       border-color: #4682B4;
       color: #000000;
     }
-
-    /* Add custom styles for the navigation bar */
-    .navbar {
-      background-color: #87CEEB;
-    }
-
-    .navbar a {
-      color: #ffffff;
-    }
   </style>
 </head>
 
 <body>
-  <!-- Add a navigation bar -->
-  <nav class="navbar navbar-default">
-    <div class="container-fluid">
-      <ul class="nav navbar-nav">
-        <!-- Add links for opening the "bar" and "bubble" elements in new tabs -->
-        <li><a href="#" onclick="openInNewTab('bar')">Bar Chart</a></li>
-        <li><a href="#" onclick="openInNewTab('bubble')">Bubble Chart</a></li>
-      </ul>
-    </div>
-  </nav>
   <div class="container-fluid">
     <div class="row">
       <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 jumbotron text-center">
@@ -70,7 +54,7 @@
         </div>
         <div class="panel panel-primary">
           <div class="panel-heading">
-            <h3 class="panel-title">Demographic Info</h3
+            <h3 class="panel-title">Demographic Info</h3>
           </div>
           <div id="sample-metadata" class="panel-body"></div>
         </div>
@@ -96,16 +80,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
   <script src="charts.js"></script>
-
-  <!-- Add a function for opening elements in new tabs -->
-  <script>
-    function openInNewTab(id) {
-      var element = document.getElementById(id);
-      var data = element.innerHTML;
-      var newTab = window.open();
-      newTab.document.write(data);
-    }
-  </script>
 </body>
 
 </html>
