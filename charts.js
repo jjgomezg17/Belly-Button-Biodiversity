@@ -99,7 +99,10 @@ function buildCharts(sample) {
 
     // Deliverable 1: 10. Use Plotly to plot the data with the layout. 
     Plotly.newPlot('bar', barData, barLayout);
+
     // Deliverable 2: 1. Create the trace for the bubble chart.
+    console.log(otuIDs.filter((item,
+      index) => otuIDs.indexOf(item) === index));
     var bubbleData = [{
       x: otuIDs,
       y: otuSampleValues,
@@ -113,10 +116,10 @@ function buildCharts(sample) {
     console.log(otuIDs);
     // Deliverable 2: 2. Create the layout for the bubble chart.
     var bubbleLayout = {
-        title: "Bacteria Cultures Per Sample",
-        xaxis: {title: "OTU ID"},
+        title: 'Bacteria Cultures Per Sample',
+        xaxis: {title: 'OTU ID'},
         automargin: true,
-        hovermode: "closest"
+        hovermode: 'closest'
     };
     // Deliverable 2: 3. Use Plotly to plot the data with the layout.
     Plotly.newPlot('bubble', bubbleData, bubbleLayout);
