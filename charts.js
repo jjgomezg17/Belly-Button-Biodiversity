@@ -110,6 +110,7 @@ function buildCharts(sample) {
          color: otuIDs.map(id => numberToColour(id*1000)),
        }
     }];
+    console.log(otuIDs);
     // Deliverable 2: 2. Create the layout for the bubble chart.
   var bubbleLayout = {
         title: "Bacteria Cultures Per Sample",
