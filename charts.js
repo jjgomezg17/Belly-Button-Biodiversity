@@ -112,7 +112,7 @@ function buildCharts(sample) {
       mode: 'markers',
        marker: {
         size: otuSampleValues,
-        color: otuIDs.map(id => numberToColour(id*1000))
+        color: otuIDs,
        }
     }];
     //otuIDs.map(id => numberToColour(id*1000))
