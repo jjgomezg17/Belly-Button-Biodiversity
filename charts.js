@@ -112,7 +112,7 @@ function buildCharts(sample) {
     }];
     console.log(otuIDs);
     // Deliverable 2: 2. Create the layout for the bubble chart.
-  var bubbleLayout = {
+    var bubbleLayout = {
         title: "Bacteria Cultures Per Sample",
         xaxis: {title: "OTU ID"},
         automargin: true,
