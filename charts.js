@@ -72,8 +72,8 @@ function buildCharts(sample) {
 
     // Deliverable 1: 6. Create variables that hold the otu_ids, otu_labels, and sample_values.
     var otuIDs = firstSample.otu_ids;
-    var otuLabels = firstSample.otu_labels; 
-    var otuSampleValues = firstSample.sample_values;
+    var otuLabels = firstSample.otu_labels.slice(0,10).reverse(); 
+    var otuSampleValues = firstSample.sample_values.slice(0,10).reverse();
     // Deliverable 3: 3. Create a variable that holds the washing frequency.
 
 
