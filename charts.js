@@ -112,8 +112,7 @@ function buildCharts(sample) {
       mode: 'markers',
        marker: {
         size: otuSampleValues,
-        color: otuSampleValues,
-        colorscale: "Portland"
+        color: otuIDs.map(id => numberToColour(id*1000))
        }
     }];
     //otuIDs.map(id => numberToColour(id*1000))
